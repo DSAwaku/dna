@@ -20,3 +20,24 @@ Maybe we can aggregate the advantage of the PE method above, and propose a novel
 
 代码库<https://github.com/genbio-ai/ModelGenerator/tree/1421cc0d189c9630cd1e06503378587dbdfc3016>
 
+官方提供的数据库：
+
+[dependency mapping](https://github.com/genbio-ai/ModelGenerator/tree/1421cc0d189c9630cd1e06503378587dbdfc3016/experiments/AIDO.DNA/dependency_mapping) 我想搞清楚，这个README说的`dependency mapping plot`图是什么意思，我之后会生成图
+
+[sequence classification](https://github.com/genbio-ai/ModelGenerator/tree/1421cc0d189c9630cd1e06503378587dbdfc3016/experiments/AIDO.DNA/sequence_classification)
+
+[zero shot variant effect prediction](https://github.com/genbio-ai/ModelGenerator/tree/1421cc0d189c9630cd1e06503378587dbdfc3016/experiments/AIDO.DNA/zeroshot_variant_effect_prediction)
+
+--------------------
+
+数据创新：根据上面的官方数据库的三个不同类型的数据，作为参考，找一些dna序列长度要求为4k - 64k之间的数据集, 当然dna序列长度和下游任务类型越丰富越好 
+
+进一步创新（来自一个门外汉的构想）：官方提供了三种类型的实验，我看的懂sequence classification 一点点，但是dependency mapping对我来说还是很茫然。如果可以找到一些不一样的任务（不局限于DNA,RNA,不过最好不要设计蛋白质结构，这又有很多其他内容），大胆假设，不用担心模型能不能适配这个任务，然后我们去通过模型解决这个任务，又是一个很不错的创新（我猜）
+
+------------------------------
+
+训练实时监控：
+
+我的网址<https://dna.bubulamb.lol>
+
+监控的参数还需要调整
