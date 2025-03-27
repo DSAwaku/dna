@@ -8,7 +8,7 @@ To enhance the sufficient representational capacity, he paper [Accurate and Gene
 
 ## Aims
 
-We wanna apply an positional encoding extension method to enlarge the sequence length (≤4k nucleotides), AIDO.DNA can handle without loss of representational capability. We will modify base on AIDO.DNA model and we expect that the sequence length will increase 8-16 times compared with AIDO.DNA. 
+We would like to apply an positional encoding extension method to enlarge the sequence length (≤4k nucleotides), AIDO.DNA can handle without loss of representational capability. We will modify base on AIDO.DNA model and we expect that the sequence length will increase 8-16 times compared with AIDO.DNA. 
 
 ## methodology
 
@@ -18,4 +18,4 @@ These positional embedding methods don't need to modify the basic architecture a
 
 Maybe we can aggregate the advantage of the PE method above, and propose a novel PE method. 
 
-**Remark:** There is no papers applying the method (only need a simple fine-tuning based on pre-trained model, do not need to modify the architecture and pre-train it from scratch) to extend the length of input DNA sequence without loss of performance.
+**Remark:** There seems to be no papers applying the method (only need a simple fine-tuning based on pre-trained model, do not need to modify the architecture and pre-train it from scratch) to extend the length of input DNA sequence without loss of performance.
