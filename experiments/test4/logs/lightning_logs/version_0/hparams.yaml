@@ -1,0 +1,50 @@
+backbone:
+  class_path: modelgenerator.backbones.aido_dna_300m
+  init_args:
+    from_scratch: false
+    max_length: null
+    use_peft: true
+    frozen: false
+    save_peft_only: true
+    lora_r: 16
+    lora_alpha: 32
+    lora_dropout: 0.1
+    lora_target_modules:
+    - query
+    - value
+    config_overwrites: null
+    model_init_args: null
+adapter:
+  class_path: modelgenerator.adapters.DynamicGatedAdapter
+  init_args:
+    dropout: 0.1
+    return_importance: false
+n_classes: 2
+multilabel: false
+optimizer:
+  class_path: torch.optim.AdamW
+  init_args:
+    lr: 0.0005
+    betas:
+    - 0.9
+    - 0.999
+    eps: 1.0e-08
+    weight_decay: 0.1
+    amsgrad: false
+    maximize: false
+    foreach: null
+    capturable: false
+    differentiable: false
+    fused: null
+lr_scheduler:
+  class_path: modelgenerator.lr_schedulers.CosineWithWarmup
+  init_args:
+    warmup_ratio: 0.1
+    num_warmup_steps: null
+    last_epoch: -1
+    verbose: deprecated
+batch_size: 8
+use_legacy_adapter: false
+strict_loading: true
+reset_optimizer_states: false
+_instantiator: lightning.pytorch.cli.instantiate_module
