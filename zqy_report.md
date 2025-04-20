@@ -147,3 +147,14 @@ The observed tradeoff between explanation capability and predictive power appear
 3. **Stable accuracy** (<0.1% difference from top performer)
 
 This equilibrium between explainability and performance positions the Dynamic Gated Adapter as a viable solution for applications requiring both model transparency and reliable predictions.
+
+### prom_300_all
+
+| Adapter               | accuracy | auroc  | f1     | mcc    |
+| --------------------- | -------- | ------ | ------ | ------ |
+| DynamicGatedAdapter   | 0.9597   | 0.9932 | 0.9600 | 0.9195 |
+| LinearMeanPoolAdapter | 0.9596   | 0.9923 | 0.9596 | 0.9193 |
+
+![image-20250420163218623](./assets/image-20250420163218623.png)
+
+###### 
