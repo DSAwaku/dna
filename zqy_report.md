@@ -1,3 +1,4 @@
+
 ## Methodology
 
 ---
@@ -20,9 +21,10 @@ where $W \in \mathbb{R}^{out\_features \times in\_features}$ is the linear proje
 ```
 where $m_i \in \{0,1\}$ is the attention mask, $\epsilon=1e^{-9}$ prevents division by zero.
 
-# 1.3 LinearMaxPoolAdapter  
+#### 1.3 LinearMaxPoolAdapter  
 **Algorithm**: Performs masked max-pooling  
 **Formulation**:  
+
 ```math
 h_{max} = \max\limits_{mask=1}(h_1,...,h_n),\quad y = W \cdot h_{max}
 ```
@@ -76,11 +78,12 @@ P(g_i^{final}>0.5) \propto \frac{1}{1+e^{-(W_g[ h_{[CLS]};h_i ] + q^T k_i)}}
 The `token_importance` weights ($g_i^{final}$) provide:
 
 1. **Interpretable Attention**:  
-   Quantifies each token's contribution to final prediction  
+   Quantifies each token's contribution to final prediction:
    
    ```math
    \mathcal{I}_i = \frac{\partial y}{\partial h_i} \approx g_i^{final}
    ```
+   The final gating values $g_i^{final}$ approximate the true gradient-based importance scores. Actually, we will compare the performance of gate method with gradient-based method for the next step experiment. But since cause of high time expenditure and computational expenditure, we didn't finish the experiment in this paper.
    
 2. **Position-Aware Masking**:  
    Explicitly zeros CLS position to prevent self-referential loops:
@@ -156,5 +159,3 @@ This equilibrium between explainability and performance positions the Dynamic Ga
 | LinearMeanPoolAdapter | 0.9596   | 0.9923 | 0.9596 | 0.9193 |
 
 ![image-20250420163218623](./assets/image-20250420163218623.png)
-
-###### 
